@@ -1,3 +1,5 @@
 *.qws
 *.bak
-db/
+*.log
+*db/
+output_files/
