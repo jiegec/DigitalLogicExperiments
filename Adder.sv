@@ -82,7 +82,19 @@ module Adder (
 	assign s_2[2] = p[2] ^ c_temp_2[1];
 	assign s_2[3] = p[3] ^ c_temp_2[2];
 
+	logic [3:0] s_3;
+	logic c_out_3;
+
+	FullAdder3 fulladder3_inst(
+		.a(a),
+		.b(b),
+		.c_in(c_in),
+		.s(s_3),
+		.c_out(c_out_3)
+	);
+
 	always_comb begin
+		// no way to use all three full adders
 		if (sel) begin
 			c_out = c_out_1;
 			s = s_1;

@@ -64,6 +64,7 @@ set_location_assignment PIN_16 -to s[2]
 set_location_assignment PIN_15 -to s[1]
 set_location_assignment PIN_14 -to s[0]
 set_location_assignment PIN_20 -to sel
+set_global_assignment -name SYSTEMVERILOG_FILE FullAdder3.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FullAdder2.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FullAdder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Adder.sv
