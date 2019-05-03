@@ -1,0 +1,12 @@
+Vivado.sim
+Vivado.runs
+Vivado.hw
+Vivado.ip_user_files
+Vivado.cache
+
+vivado*.jou
+vivado*.log
+vivado_pid*.str
+.Xil
+hs_err_*.log
+vivado_pid*.zip

@@ -3,8 +3,8 @@ module Adder (
 	input [3:0] b,
 	input c_in,
 	input sel,
-	output [3:0]s,
-	output c_out
+	output logic [3:0]s,
+	output logic c_out
 );
 
 	logic [2:0] c_temp_1;
