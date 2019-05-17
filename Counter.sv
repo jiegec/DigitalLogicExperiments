@@ -1,6 +1,7 @@
 module Counter (
 	input wire clk,
 	input wire rst,
+	input wire sel,
 
 	output reg[6:0] digital_10,
 	output reg[6:0] digital_1
@@ -11,12 +12,16 @@ module Counter (
 	logic [3:0] number_10;
 	logic [3:0] number_1;
 
+	logic clk_in;
+
 	ClockDivicer clock_divicer_inst (
 		.clk_1M(clk),
-		.clk_1(clk_1),
+		.clk_1(clk_1)
 	);
 
-	always_ff @ (posedge clk_1) begin
+	assign clk_in = sel ? clk_1 : clk;
+
+	always_ff @ (posedge clk_in) begin
 		if (rst) begin
 			number_1 <= 0;
 			number_10 <= 0;
