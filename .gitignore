@@ -1,0 +1,6 @@
+*.qws
+*.bak
+*.log
+*.cdf
+*db/
+output_files/
